@@ -1,0 +1,20 @@
+{
+  "name": "code-detector",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:client\"",
+    "dev:api": "node api/server.js",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd client && npm install"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
